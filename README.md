@@ -5,6 +5,8 @@ nnecstasy のバックエンドリポジトリです。
 - [nnecstasy-backend-go](#nnecstasy-backend-go)
 - [必要ツール](#必要ツール)
 - [開発手順](#開発手順)
+  - [vscode利用者向け](#vscode利用者向け)
+- [参考](#参考)
 
 
 # 必要ツール
@@ -24,4 +26,20 @@ $ docker-compose up -d --build
 $ docker-compose logs -f golang-demo
 ```
 
-[http://localhost:8081/](http://localhost:8081/)にアクセスして、GraphiQL(Graphql実行環境)の画面が出ていればOKです。
+[http://localhost:8081/](http://localhost:8081/)にアクセスして、GraphiQL(Graphql実行環境v)の画面が出ていればOKです。
+## vscode利用者向け
+vscodeの拡張機能 [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) をインストールしてください。
+
+```sh
+# git clone
+$ git clone https://github.com/ky-hy/nnecstasy-backend-go.git
+$ cd ./nnecstasy-backend-go
+# vocode起動 
+$ code .
+```
+ctrl(cmd) + shift + p を押して, 「Remote-Containers: Reopen in Container」を実行してください。
+実行後、[http://localhost:8081/](http://localhost:8081/)にアクセスして、GraphiQL(Graphql実行環境v)の画面が出ていればOKです。
+
+
+# 参考
+- https://code.visualstudio.com/docs/remote/containers

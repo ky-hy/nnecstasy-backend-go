@@ -11,6 +11,11 @@ import (
 	"github.com/ky-hy/nnecstasy-backend-go/graph/model"
 )
 
+/* 
+		A function that takes a context and an input and returns a Todo and an error.
+		@params {context.Context} ctx - じｊげいｊぎえ
+		Type_ctx
+*/
 func (r *mutationResolver) CreateTodo(ctx context.Context, input model.NewTodo) (*model.Todo, error) {
 	panic(fmt.Errorf("not implemented"))
 }
