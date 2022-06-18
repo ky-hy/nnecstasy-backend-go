@@ -1,28 +1,16 @@
-# GraphQL schema example
-#
-# https://gqlgen.com/getting-started/
-
-type Todo {
-  id: ID!
-  text: String!
-  done: Boolean!
-  user: User!
+# graphql schema
+type Thumbnail {
+   url: String!
 }
-
-type User {
+type Video {
   id: ID!
   name: String!
+  url: String!
+  thumbnail: Thumbnail!
 }
-
+input VideoFilter {
+  actresses: [String]
+}
 type Query {
-  todos: [Todo!]!
-}
-
-input NewTodo {
-  text: String!
-  userId: String!
-}
-
-type Mutation {
-  createTodo(input: NewTodo!): Todo!
+  AdultVideos(filter:VideoFilter ): [Video!]!
 }
