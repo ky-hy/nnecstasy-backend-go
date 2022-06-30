@@ -7,7 +7,7 @@ import (
 
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
-	"github.com/rs/cors"
+	"github.com/go-chi/cors"
 
 	"github.com/ky-hy/nnecstasy-backend-go/graph"
 	"github.com/ky-hy/nnecstasy-backend-go/graph/generated"
@@ -30,6 +30,7 @@ func main() {
 		AllowedOrigins:   []string{"*"},
 		AllowCredentials: true,
 	})
+
 	http.Handle("/query", c.Handler(srv))
 
 	log.Printf("connect to http://localhost:%s/ for GraphQL playground", port)
