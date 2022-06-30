@@ -2,19 +2,18 @@
 
 package model
 
-type NewTodo struct {
-	Text   string `json:"text"`
-	UserID string `json:"userId"`
+type Thumbnail struct {
+	VideoID string `json:"videoId"`
+	URL     string `json:"url"`
 }
 
-type Todo struct {
-	ID   string `json:"id"`
-	Text string `json:"text"`
-	Done bool   `json:"done"`
-	User *User  `json:"user"`
+type Video struct {
+	ID        string     `json:"id"`
+	Name      string     `json:"name"`
+	URL       string     `json:"url"`
+	Thumbnail *Thumbnail `json:"thumbnail"`
 }
 
-type User struct {
-	ID   string `json:"id"`
-	Name string `json:"name"`
+type VideoFilter struct {
+	Actresses []*string `json:"actresses"`
 }

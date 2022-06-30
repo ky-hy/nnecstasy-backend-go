@@ -7,3 +7,5 @@ services:
     tty: true
     ports:
       - 8081:8080
+    entrypoint:
+      sleep 86400
